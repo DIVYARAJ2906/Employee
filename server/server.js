@@ -166,7 +166,7 @@ app.get('/employee/:id', (req, res) => {
     const sql = "SELECT * FROM employee where id = ?";
     con.query(sql, [id], (err, result) => {
         if(err) return res.json({Error: "Get employee error in sql"});
-        return res.json({Status: "Success", Result: result})
+        return res.json({Status: "Success", Result: result});
     })
 })
 
